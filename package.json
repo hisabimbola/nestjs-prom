@@ -38,7 +38,7 @@
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "reflect-metadata": "^0.1.12",
-    "rxjs": "^6.0.0"
+    "rxjs": "^7.4.0"
   },
   "dependencies": {
     "@nestjs/testing": "^8.2.3",

@@ -47,7 +47,7 @@ export function findOrCreateMetric({
   name,
   type,
   help,
-  labelNames,
+  labelNames = [],
   registry,
   buckets,
 }: {

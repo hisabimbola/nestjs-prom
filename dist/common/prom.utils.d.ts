@@ -1,0 +1,21 @@
+import * as client from 'prom-client';
+import { IMetricArguments, GenericMetric, CounterMetric, GaugeMetric, HistogramMetric, SummaryMetric, Registry, IHistogramMetricArguments } from '../interfaces';
+declare type MetricType = 'Counter' | 'Gauge' | 'Histogram' | 'Summary';
+export declare function getMetricToken(type: MetricType, name: string): string;
+export declare function getRegistryName(name: string): string;
+export declare function getOptionsName(name: string): string;
+export declare function getRegistry(name?: string): client.Registry;
+export declare function getDefaultRegistry(): client.Registry;
+export declare function findOrCreateMetric({ name, type, help, labelNames, registry, buckets, }: {
+    name: string;
+    type: MetricType;
+    help?: string;
+    labelNames?: string[];
+    registry?: Registry;
+    buckets?: number[];
+}): GenericMetric;
+export declare function findOrCreateCounter(args: IMetricArguments): CounterMetric;
+export declare function findOrCreateGauge(args: IMetricArguments): GaugeMetric;
+export declare function findOrCreateHistogram(args: IHistogramMetricArguments): HistogramMetric;
+export declare function findOrCreateSummary(args: IMetricArguments): SummaryMetric;
+export {};
